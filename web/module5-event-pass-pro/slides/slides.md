@@ -26,7 +26,7 @@ style: |
 1.  **Project: EventPass Pro**
 2.  **Firebase Auth, Firestore & Storage**
 3.  **Using Gemini API**
-4.  **Deploy to Vercel and Google Cloud Run**
+4.  **Deploy to Vercel**
 5.  **Deep Dive**
 6.  **Challenge Lab**
 
@@ -643,6 +643,69 @@ export function EventForm() {
     );
 }
 ```
+
+---
+
+<!-- _class: lead -->
+# 4. Deploy to Vercel
+
+---
+
+## 4.1 Option A: Vercel CLI
+
+Deploy directly from your terminal.
+
+```bash
+# 1. Install CLI
+npm i -g vercel
+
+# 2. Login
+vercel login
+
+# 3. Deploy (Follow the prompts)
+vercel
+```
+
+**Common Prompts:**
+- Set up and deploy? [Y/n] **y**
+- Which scope? **(Select your account)**
+- Link to existing project? [y/N] **n**
+- Project name? **event-pass-pro**
+- Directory? **./**
+
+---
+
+## Environment Variables with CLI
+
+You must set environment variables for the production build.
+
+```bash
+# Set secrets via CLI
+vercel env add NEXT_PUBLIC_FIREBASE_API_KEY
+vercel env add FIREBASE_ADMIN_PRIVATE_KEY
+
+# Push local env vars (Development)
+vercel env pull .env.development.local
+```
+
+> **Pro Tip:** Vercel automatically detects Next.js projects and configures build settings (`next build`).
+
+---
+
+## 4.2 Option B: GitHub Integration
+
+Continuous Deployment (CD) - The recommended way.
+
+1.  **Push your code** to a GitHub repository.
+2.  **Go to Vercel Dashboard** > "Add New..." > "Project".
+3.  **Import** your `event-pass-pro` repository.
+4.  **Configure Environment Variables**:
+    - Copy/Paste all values from `.env.local` into the "Environment Variables" section.
+5.  **Click Deploy**.
+
+**Benefits:**
+- **Automatic Deploys:** Pushing to `main` deploys to production.
+- **Preview URLs:** Pull Requests get their own live URL.
 
 ---
 
