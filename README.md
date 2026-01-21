@@ -27,13 +27,13 @@ Desarrollo de aplicaciones nativas modernas con Kotlin y Jetpack Compose.
 
 Desarrollo de aplicaciones web modernas con TypeScript, React y Next.js.
 
-| Módulo | Nombre | Proyecto | Temas |
-|--------|--------|----------|-------|
-| 1 | Fundamentos | [Country Explorer](web/module1-country-explorer/README.md) | HTML/Tailwind/DOM, JS Async & Fetch, TypeScript |
-| 2 | Frontend SPA | [Real Estate React](web/module2-real-estate/README.md) | React/Vite, Forms (Zod), Routing, LocalStorage |
-| 3 | Backend API | [EstateHub API](web/module3-realestate-hub-api/README.md) | Node.js, Express, Controllers, Base de Datos |
-| 4 | Next.js | [EventPass](web/module4-event-pass/README.md) | App Router, Server Components, Server Actions |
-| 5 | Firebase, AI & Deploy | [EventPass Pro](web/module5-event-pass-pro/README.md) | Firebase Auth/Firestore, Gemini AI, Deploy |
+| Módulo | Nombre | Proyecto | Temas | Materials |
+|--------|--------|----------|-------|-----------|
+| 1 | Fundamentos | [Country Explorer](web/module1-country-explorer/README.md) | HTML/Tailwind/DOM, JS Async & Fetch, TypeScript | [slides](web/module1-country-explorer/slides/slides.md) |
+| 2 | Frontend SPA | [Real Estate React](web/module2-real-estate/README.md) | React/Vite, Forms (Zod), Routing, LocalStorage | [slides](web/module2-real-estate/slides/slides.md) |
+| 3 | Backend API | [EstateHub API](web/module3-realestate-hub-api/README.md) | Node.js, Express, Controllers, Base de Datos | [slides](web/module3-realestate-hub-api/slides/slides.md) |
+| 4 | Next.js | [EventPass](web/module4-event-pass/README.md) | App Router, Server Components, Server Actions | [slides](web/module4-event-pass/slides/slides.md) |
+| 5 | Firebase, AI & Deploy | [EventPass Pro](web/module5-event-pass-pro/README.md) | Firebase Auth/Firestore, Gemini AI, Deploy | [slides](web/module5-event-pass-pro/slides/slides.md) |
 
 📖 [Ver documentación completa del track Web](web/README.md)
 
