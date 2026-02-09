@@ -91,24 +91,7 @@ class SpotRepository(
         return spotDao.insertSpot(spot)
     }
 
-    /**
-     * Elimina un spot y su imagen asociada
-     *
-     * IMPORTANTE: Este método también elimina el archivo de imagen
-     * del sistema de archivos para evitar archivos huérfanos.
-     *
-     * @param id ID del spot a eliminar
-     */
-    suspend fun deleteSpot(id: Long) {
-        // Primero obtener el spot para conocer la URI de la imagen
-        val spot = spotDao.getSpotById(id)
-        spot?.let {
-            // Eliminar el archivo de imagen
-            cameraUtils.deleteImage(Uri.parse(it.imageUri))
-        }
-        // Eliminar el registro de la BD
-        spotDao.deleteSpotById(id)
-    }
+
 
     /**
      * Obtiene el número de spots para generar títulos secuenciales

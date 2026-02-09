@@ -85,23 +85,7 @@ interface SpotDao {
     @Query("SELECT COUNT(*) FROM spots")
     suspend fun getSpotCount(): Int
 
-    /**
-     * Elimina un spot por su ID
-     *
-     * NOTA: La eliminación de la imagen del sistema de archivos
-     * debe manejarse por separado en el Repository
-     *
-     * @param id ID del spot a eliminar
-     */
-    @Query("DELETE FROM spots WHERE id = :id")
-    suspend fun deleteSpotById(id: Long)
 
-    /**
-     * Elimina todos los spots de la base de datos
-     *
-     * ADVERTENCIA: Esta operación es destructiva y no se puede deshacer
-     * Usar solo para testing o reset de la app
-     */
-    @Query("DELETE FROM spots")
-    suspend fun deleteAllSpots()
+
+
 }

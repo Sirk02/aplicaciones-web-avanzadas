@@ -36,9 +36,9 @@ style: |
 
 An app that captures **geolocated photos** and displays them on an interactive map.
 
-| Map Screen | Camera Screen |
+| Map Screen | Detail Screen |
 |:----------:|:-------------:|
-| ![h:400](../assets/screenshot_map.png) | ![h:400](../assets/screenshot_camera.png) |
+| ![h:400](../assets/screenshot_map.png) | ![h:400](../assets/screenshot_detail.png) |
 
 ---
 

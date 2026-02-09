@@ -88,7 +88,7 @@ class MapViewModel(
     val spots: StateFlow<List<SpotEntity>> = repository.getAllSpots()
         .stateIn(
             scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5000),
+            started = SharingStarted.Lazily,
             initialValue = emptyList()
         )
 
@@ -198,18 +198,5 @@ class MapViewModel(
         _errorMessage.value = null
     }
 
-    /**
-     * Elimina un spot por su ID
-     *
-     * @param id ID del spot a eliminar
-     */
-    fun deleteSpot(id: Long) {
-        viewModelScope.launch {
-            try {
-                repository.deleteSpot(id)
-            } catch (e: Exception) {
-                _errorMessage.value = "Error eliminando spot: ${e.message}"
-            }
-        }
-    }
+
 }
