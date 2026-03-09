@@ -4,9 +4,11 @@ theme: default
 paginate: true
 backgroundColor: #fff
 style: |
-  section { font-family: 'Inter', sans-serif; }
-  h1 { color: #1A477B; }
-  h2 { color: #000000; }
+  section { font-family: 'Inter', sans-serif; padding-top: 20px; padding-bottom: 20px;}
+  h1 { color: #1A477B; margin-bottom: 0.0em; }
+  h2 { color: #000000; margin-bottom: 0.2em; }
+  p, ul { margin-top: 0.5em; margin-bottom: 0.5em; }
+  li { line-height: 1.2; }
   code { background-color: #f0f0f0; padding: 0.2em; border-radius: 4px; }
   pre { background-color: #f5f5f5; border-radius: 8px; }
   .center { text-align: center; }
@@ -44,7 +46,7 @@ We are building a Real Estate listing application with React.
 
 ---
 
-![height:500px center](assets/app_screenshot.png)
+![height:500px center](../assets/app_screenshot.png)
 
 ---
 
@@ -618,23 +620,23 @@ React uses a virtual representation of the DOM for efficiency.
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Virtual DOM                               │
+│                        Virtual DOM                              │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  [State Change]                                                  │
-│       │                                                          │
-│       ▼                                                          │
-│  [New Virtual DOM] ◀──── React creates new tree                  │
-│       │                                                          │
-│       ▼                                                          │
-│  [Diff Algorithm] ◀──── Compares old vs new                      │
-│       │                                                          │
-│       ▼                                                          │
-│  [Minimal Updates] ◀──── Only changed nodes updated              │
-│       │                                                          │
-│       ▼                                                          │
-│  [Real DOM]                                                      │
-│                                                                  │
+│                                                                 │
+│  [State Change]                                                 │
+│       │                                                         │
+│       v                                                         │
+│  [New Virtual DOM] <──── React creates new tree                 │
+│       │                                                         │
+│       v                                                         │
+│  [Diff Algorithm] <──── Compares old vs new                     │
+│       │                                                         │
+│       v                                                         │
+│  [Minimal Updates] <──── Only changed nodes updated             │
+│       │                                                         │
+│       v                                                         │
+│  [Real DOM]                                                     │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -718,24 +720,24 @@ How Vite serves React applications.
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Vite Dev Server                           │
+│                        Vite Dev Server                          │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  Browser                                                         │
-│     │                                                            │
-│     │ Request: /src/App.tsx                                      │
-│     ▼                                                            │
-│  Vite                                                            │
-│     │                                                            │
-│     ├── Transform JSX → JavaScript (esbuild)                     │
-│     ├── Transform TypeScript → JavaScript                        │
-│     ├── Inject HMR client                                        │
-│     │                                                            │
-│     ▼                                                            │
-│  Browser receives transformed module                             │
-│                                                                  │
-│  [File Change] ──▶ HMR Update ──▶ Page updates without refresh   │
-│                                                                  │
+│                                                                 │
+│  Browser                                                        │
+│     │                                                           │
+│     │ Request: /src/App.tsx                                     │
+│     v                                                           │
+│  Vite                                                           │
+│     │                                                           │
+│     ├── Transform JSX → JavaScript (esbuild)                    │
+│     ├── Transform TypeScript → JavaScript                       │
+│     ├── Inject HMR client                                       │
+│     │                                                           │
+│     v                                                           │
+│  Browser receives transformed module                            │
+│                                                                 │
+│  [File Change] ──> HMR Update ──> Page updates without refresh  │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -829,6 +831,10 @@ Implement an image gallery that:
 **TypeScript + React**
 *   [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
 *   [Total TypeScript: React](https://www.totaltypescript.com/tutorials/react-with-typescript)
+
+---
+
+## Resources
 
 **Shadcn UI**
 *   [Shadcn UI Documentation](https://ui.shadcn.com)
